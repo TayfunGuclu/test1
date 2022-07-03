@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>HOTS FR</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <h1>
+          <a href="./index.html">HOTS FR</a>
+        </h1>
+        <ul>
+          <li><a class="active" href="./index.html">Accueil</a></li>
+          <li><a href="./guides.html">Les Guides</a></li>
+          <li><a href="./contact.html">Nous Contacter</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="rank">
+      <div class="container">
+        <img class="rank-img" src="./Images/Heroes Rank.jpg" alt="rank" />
+        <div class="separator"></div>
+        <div class="rank-text">
+          <h1>Calcul ton Winrate</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+            vero?
+          </p>
+          <p>
+            Nombre de Win : <input type="number" id="inputWin" value="250" />
+          </p>
+          <p>
+            Nombre de Game : <input type="number" id="inputGame" value="500" />
+          </p>
+          <button onclick="Winrate()">
+            Cliquer ici pour calculer le Winrate
+          </button>
+          <p id="result"></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Copyright &#9400; HOTS FR - 2022</p>
+    </footer>
+  </body>
+  <script>
+    const win = inputWin.value;
+    const game = inputGame.value;
+
+    function Winrate() {
+      let win = inputWin.value;
+      let game = inputGame.value;
+      let Winrate = (win / game) * 100;
+      result.innerHTML = Math.round(Winrate) + "%";
+    }
+    console.log(win / game) * 100;
+  </script>
+</html>
